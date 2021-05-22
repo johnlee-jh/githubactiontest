@@ -42,7 +42,7 @@ jobs:
         plaintext: true
     - name: Echo file changes
       run: |
-        for directory in {{ steps.get_file_changes.outputs.files }}
+        for directory in ${{ steps.get_file_changes.outputs.files }}
         do
           flake8 $directory
         done
