@@ -1,7 +1,6 @@
 datetime
 pickle-mixin
 typing
-unittest
 warnings
-shapely
-enum
+Shapely==1.7.1
+enum34==1.1.10
