@@ -43,12 +43,9 @@ jobs:
       run: |
         for directory in ${{ steps.get_file_changes.outputs.files }}
         do
-          if [ ${directory: -3} = "$.py" ]; then flake8 $directory; fi
-          flake8 flow/flow_processing_input_test.py
+          if [ ${directory: -3} = "$.py" ]; then echo "$flake8 $directory"; fi
+          flake8 flow/flow_processed_output.py
         done
-        flake8 flow/flow_processed_output.py
-    - name: testing
-      run: flake8 flow/flow_processing_input_test.py
   Pylint:
     runs-on: ubuntu-latest
     steps:
