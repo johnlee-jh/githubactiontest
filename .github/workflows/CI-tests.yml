@@ -19,4 +19,7 @@ jobs:
     - name: Test with unittest
       run: pytest flow/flow_processing_input_test.py
     - name: Additional Tests
-      run: while read line; do pytest line; done < testdirectories.txt
+      run: |
+        while read directory; do 
+          echo "$directory"
+        done <testdirectories.txt
