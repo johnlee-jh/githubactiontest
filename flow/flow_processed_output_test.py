@@ -10,7 +10,7 @@ To run all test cases, use the following command:
     >>> python3 flow_processed_output_test.py
 """
 
-# modify asdfsadfasds 1234512dsafsa adsfasdfasdf
+#this is a comment that flake8 would NOT like! (no space after hashtag)
 
 import datetime
 import flow_processed_output
