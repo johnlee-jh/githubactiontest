@@ -46,7 +46,9 @@ jobs:
           if [ ${directory: -3} = "$.py" ]; then flake8 $directory; fi
           flake8 flow/flow_processing_input_test.py
         done
-        flake8 flow/flow_processing_input_test.py
+        flake8 flow/flow_processed_output.py
+    - name: testing
+      run: flake8 flow/flow_processing_input_test.py
   Pylint:
     runs-on: ubuntu-latest
     steps:
