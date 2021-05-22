@@ -40,7 +40,7 @@ jobs:
         for directory in ${{ steps.get_file_changes.outputs.files }}
         do
           if [ ${directory: -2} = "$py" ]; then echo "$hello"; fi
-          echo "$hello"
+          echo hello
         done
   Pylint:
     runs-on: ubuntu-latest
