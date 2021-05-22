@@ -13,8 +13,8 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
-        python -m pip3 install --upgrade pip3
-        pip3 install --upgrade pytest
-        if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
+        python -m pip install --upgrade pip
+        pip install --upgrade pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with unittest
       run: pytest flow/flow_processing_input_test.py
