@@ -1,6 +1,5 @@
 datetime
 pickle-mixin
 typing
-warnings
 Shapely==1.7.1
 enum34==1.1.10
