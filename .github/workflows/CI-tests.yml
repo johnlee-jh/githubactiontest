@@ -43,8 +43,7 @@ jobs:
       run: |
         for directory in ${{ steps.get_file_changes.outputs.files }}
         do
-          if [ ${directory: -3} = "$.py" ]; then echo "$flake8 $directory"; fi
-          flake8 flow/flow_processed_output.py
+          if [ ${directory: -3} = "$.py" ]; then echo "$directory"; fi
         done
   Pylint:
     runs-on: ubuntu-latest
