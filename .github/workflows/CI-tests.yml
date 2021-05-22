@@ -21,5 +21,5 @@ jobs:
     - name: Additional Tests
       run: |
         while read directory; do 
-          echo "$directory"
+          pytest directory
         done <testdirectories.txt
