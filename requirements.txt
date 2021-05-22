@@ -3,3 +3,4 @@ pickle-mixin
 typing
 Shapely==1.7.1
 enum34==1.1.10
+flake8==3.9.2
