@@ -29,6 +29,15 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
+    - name: Get file changes
+      id: get_file_changes
+      uses: dorner/file-changes-action@v1.2.0
+      with:
+        githubToken: ${{ secrets.GITHUB_TOKEN }}
+        plaintext: true
+    - name: Echo file changes
+      run: |
+        echo Changed files: ${{ steps.get_file_changes.outputs.files }}
   Pylint:
     runs-on: ubuntu-latest
     steps:
