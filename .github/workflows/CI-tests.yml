@@ -44,8 +44,7 @@ jobs:
       run: |
         for directory in ${{ steps.get_file_changes.outputs.files }}
         do
-          if [ ${directory: -3} = "$.py" ]; then echo $directory; fi
-          flake8 $directory
+          if [ ${$directory: -3} = "$.py" ]; then flake8 $directory; fi
         done
   Pylint:
     runs-on: ubuntu-latest
