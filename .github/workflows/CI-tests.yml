@@ -18,3 +18,5 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with unittest
       run: pytest flow/flow_processing_input_test.py
+    - name: Additional Tests
+      run: while read line; do pytest line; done < testdirectories.txt
