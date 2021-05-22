@@ -247,7 +247,7 @@ class createDLDataset:
 
     def add_locations(self):
         """Add detectors and their locations to dataset"""
-        for _ in range(self.num_locations):
+        for _ in range(0, self.num_locations):
             detector_id = self.generate_id()
             detector_direction = self.generate_direction()
             detector_point = self.generate_point()
