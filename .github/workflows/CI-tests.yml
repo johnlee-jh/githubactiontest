@@ -37,7 +37,8 @@ jobs:
         plaintext: true
     - name: Echo file changes
       run: |
-        echo Changed files: ${{ steps.get_file_changes.outputs.files }}
+        for directory in {{ steps.get_file_changes.outputs.files }}
+        flake8 $directory
   Pylint:
     runs-on: ubuntu-latest
     steps:
