@@ -7,9 +7,6 @@ Classes:
     OutputFlowData: Data class for output flow data from one detector.
     OutputFlowDataSet: Data class for output flow data from multiple detectors.
 """
-#modify asdfasdgaasdgdd 12 adsf dsakkadsk af sdijfak 23i32n
-#yeet23dfdsafsdfasdfasdfsd
-#yeetmode1234asdfasd
 
 import datetime
 from flow_processing_input import DetectorId, SectionId
