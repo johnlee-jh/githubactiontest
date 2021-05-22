@@ -8,7 +8,6 @@ Classes:
     OutputFlowDataSet: Data class for output flow data from multiple detectors.
 """
 #modify asdfasdgaasdgdd 12 adsf dsakkadsk af sdijfak 23i32n
-#wootas
 #yeet23
 
 import datetime
