@@ -3,16 +3,14 @@ name: CI_tests
 on: push
 
 jobs:
-  Run_TestCases:
+  TestCases:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
+    - uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Install Dependencies
-      run: |
+    - run: |
         python -m pip install --upgrade pip
         pip install --upgrade pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
