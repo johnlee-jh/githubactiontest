@@ -80,5 +80,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install --upgrade pylint
     - name: Get All Files
-      run: ls -R
+      run: |
+        for directory in ${{ env.working-directory }}
+        do
+          if [ ${directory: -3} == ".py" ]
+          then
+            echo Test conducted on $directory
+            pylint --max-line-length=80 $directory
+          fi
+        done
       working-directory: ${{ env.working-directory }}
