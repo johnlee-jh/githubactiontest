@@ -83,10 +83,6 @@ jobs:
       run: |
         for directory in ${{ env.working-directory }}
         do
-          if [ ${directory: -3} == ".py" ]
-          then
-            echo Test conducted on $directory
-            pylint --max-line-length=80 $directory
-          fi
+          echo $directory
         done
       working-directory: ${{ env.working-directory }}
