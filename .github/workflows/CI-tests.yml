@@ -72,7 +72,7 @@ jobs:
   Pylint-All-Files:
     runs-on: ubuntu-latest
     env:
-      working-directory: .
+      working-directory: ./*
     steps:
     - uses: actions/checkout@v2
     - name: Install Dependencies
