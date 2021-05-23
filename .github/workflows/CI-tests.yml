@@ -79,6 +79,10 @@ jobs:
         pip install --upgrade pylint
     - name: RESULTS
       run: pylint --max-line-length=80 *
+    - name: Checkout Head
+      run: git checkout $HEAD_REF
+      env:
+        HEAD_REF: ${{ github.event.pull_request.head.ref }}
     - name: Get Base Lint Score
       run: |
         echo ::set-env name=BASE_LINT::$(git diff --name-only --diff-filter=M $HEAD_REF | grep -E "\.py" | xargs pylint | grep -E -o "at [0-9.-]+" | grep -E -o [0-9.-]+)
